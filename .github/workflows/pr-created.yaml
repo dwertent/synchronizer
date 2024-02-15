@@ -10,8 +10,8 @@ jobs:
   component-tests:
     strategy:
       matrix:
-        parallel: [5]
-        index: [0, 1, 3, 4, 5] # Add more indices as needed
+        parallel: [6]
+        index: [0, 1, 2, 3, 4, 5] # Add more indices as needed
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4

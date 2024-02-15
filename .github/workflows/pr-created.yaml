@@ -27,6 +27,8 @@ jobs:
         with:
           index: ${{ matrix.index }}
           total: ${{ matrix.parallel }}
+          flags: "--tags=integration"
+          packages: "./tests/..."
       - name: Run component tests
         run: |
           cd tests && go test --timeout=20m --tags=integration -run "${{ steps.test_split.outputs.run }}"
